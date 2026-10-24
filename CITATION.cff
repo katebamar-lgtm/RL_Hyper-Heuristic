@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript and the version of the code you used. Update this metadata when publication details or a DOI become available."
+type: software
+title: "Reinforcement Learning and Adaptive Operator Selection for Multi-Objective Optimization in Multimodal Transportation Networks"
+version: 1.0.0
+license: MIT
+date-released: 2026-10-23
+authors:
+  - family-names: "Kateb Hachemi Amar"
+    given-names: "Amar"
+    orcid: "https://orcid.org/0009-0007-4320-415X"
+  - family-names: "Hamdadou"
+    given-names: "Djamel"
+    orcid: "https://orcid.org/0009-0003-9740-596X"
+  - family-names: "Abbou"
+    given-names: "Sarra Itidal"
+    orcid: "https://orcid.org/0000-0001-8332-6476"
+  - family-names: "Benbrik"
+    given-names: "Nihad"
+    orcid: "https://orcid.org/0009-0005-2386-4359"
+  - family-names: "Bouazdia"
+    given-names: "Rania"
+    orcid: "https://orcid.org/0009-0003-7608-321X"
+abstract: >-
+  Research code and saved experimental outputs for evaluating online UCB-type
+  adaptive operator selection in MOEA/D and an offline-trained frozen policy
+  in OMF for a four-objective multimodal multi-criteria shortest-path problem.

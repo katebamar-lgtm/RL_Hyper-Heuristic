@@ -1,0 +1,6 @@
+# Full research code (algorithm implementations and visualization utilities)
+# The paper-specific post-processing subset is also listed separately.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+matplotlib==3.10.8

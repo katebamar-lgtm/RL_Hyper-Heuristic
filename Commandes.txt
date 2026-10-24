@@ -1,0 +1,86 @@
+PAPER REPRODUCTION / REPRODUCTION DES RESULTATS DU MANUSCRIT
+============================================================
+
+IMPORTANT
+---------
+The final paper uses the stored raw runs plus the shared-normalization,
+common-Monte-Carlo-sample indicator protocol. Do NOT run the optimization
+batches just to regenerate tables/figures. The commands below do not rerun
+any optimization algorithm and do not overwrite the raw-run or legacy
+indicator files.
+
+1) Install the tested post-processing environment
+-------------------------------------------------
+python -m pip install -r requirements-postprocessing.txt
+
+2) Recompute indicators from the included final raw fronts
+----------------------------------------------------------
+python scripts/postprocessing/recompute_indicators.py .
+
+This writes to postprocessing_reports/step2_recomputed/:
+- synthetic_indicators_recomputed.jsonl
+- lyon_indicators_recomputed.jsonl
+- synthetic_summary_recomputed.csv
+- lyon_summary_recomputed.csv
+- reference_and_normalization_manifest.json
+- step2_recompute_report.txt
+
+Normalization bounds are shared per instance across all stored algorithm
+fronts and repetitions. HV uses 20,000 deterministic Monte-Carlo sample
+locations shared by algorithms within an instance and reference point
+(1.1, 1.1, 1.1, 1.1). This step reads the raw runs; it does not run algorithms.
+
+3) Reproduce statistical tests and paper tables
+------------------------------------------------
+python scripts/postprocessing/analyze_paper_results.py .
+
+Key outputs in postprocessing_reports/step3_statistics/:
+- synthetic_primary_HV_instance_level.csv: the four primary HV tests, with
+  Holm correction over four planned contrasts (the results in Table 8).
+- synthetic_primary_HV_instance_median_sensitivity.csv: median sensitivity.
+- synthetic_secondary_IGD_GD_instance_level.csv: the eight secondary IGD/GD
+  tests (four contrasts x two indicators), Holm-adjusted together.
+- synthetic_friedman_summary.csv and synthetic_friedman_mean_ranks.csv:
+  11-method Friedman test and average ranks by instance.
+- synthetic_nemenyi_pairs.csv: Nemenyi pairwise rank differences, with the
+  critical difference calculated for 11 algorithms and 9 instances.
+- synthetic_allpairs_wilcoxon_holm.csv: exploratory 55-pair Wilcoxon family.
+- synthetic_all_algorithm_HV_by_scale.csv: data for Table 5.
+- synthetic_six_primary_conditions_by_scale.csv: data for Tables 6 and 7.
+- lyon_all_algorithms_by_route.csv: data for Table 10.
+- lyon_route_level_HV_comparisons.csv: descriptive route-level comparisons.
+- synthetic_pooled_run_sensitivity.csv and paper_reproduction_report.txt.
+
+4) Run the complete post-processing pipeline in one command
+-----------------------------------------------------------
+python scripts/postprocessing/run_full_postprocessing.py .
+
+5) Validate consistency against the manuscript numbers
+-------------------------------------------------------
+python scripts/postprocessing/validate_paper_consistency.py .
+
+The validator checks that regenerated indicators exactly reproduce the
+included stored indicator files, and that primary p-values, the 11-method
+Friedman/Nemenyi results, the 55-pair Holm minimum, and secondary IGD/GD
+adjustments match this version of the paper. If it fails, do not silently
+change the expected values: determine whether the data, script, or manuscript
+has intentionally changed.
+
+COMPATIBILITY ENTRY POINTS
+--------------------------
+python examples/run_phase4_compute_indicators.py
+python scripts/compute_trajet_indicators.py data/lyon
+python -m model.stats_analysis .
+
+These older command paths now delegate to the paper-consistent scripts and
+write analysis outputs beneath postprocessing_reports/ rather than replacing
+results/phase4_indicators.jsonl with the old hv/igd/gd schema.
+
+OPTIMIZATION EXECUTION
+----------------------
+The raw runs used in the submitted paper are included in results/phase4_raw_runs.jsonl
+and data/lyon/case_study_raw_runs.jsonl. The optimization batch scripts are
+retained for future experiments, but rerunning them is NOT part of reproducing
+the published post-processing and can append new runs or invalidate the
+manuscript's fixed result counts. If a new optimization campaign is planned,
+use a clean output location and revise the paper's protocol/results together.
