@@ -1,0 +1,12 @@
+{
+  "config": {
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.2,
+    "archive_ratio": 0.5
+  },
+  "hv": 0.792312555234375,
+  "ties": [
+    "0.5",
+    "0.7"
+  ]
+}

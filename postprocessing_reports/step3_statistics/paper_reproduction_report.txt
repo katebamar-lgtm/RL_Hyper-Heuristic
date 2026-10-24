@@ -1,0 +1,68 @@
+PAPER POST-PROCESSING REPRODUCTION REPORT
+Project root: Hyper_Heuristic_Code (resolved at runtime)
+Optimization algorithms executed: NO.
+Input source: postprocessing_reports/step2_recomputed/*.jsonl; raw inputs unchanged.
+
+PRIMARY HV TESTS (9 INSTANCE-LEVEL MEANS; HOLM FAMILY SIZE = 4)
+RL-MOEA/D vs static MOEA/D: wins=8/9, mean_A=0.797667, mean_B=0.766972, p=0.07421875, Holm4=0.1484375
+RL-MOEA/D vs random MOEA/D: wins=4/9, mean_A=0.797667, mean_B=0.808739, p=0.65234375, Holm4=0.65234375
+OMF-RL vs static OMF: wins=0/9, mean_A=0.338781, mean_B=0.619098, p=0.00390625, Holm4=0.015625
+OMF-RL vs random OMF: wins=0/9, mean_A=0.338781, mean_B=0.608245, p=0.00390625, Holm4=0.015625
+
+SECONDARY IGD/GD TESTS (HOLM FAMILY SIZE = 8)
+RL-MOEA/D vs static MOEA/D [igd_recomputed]: p=0.07421875, Holm8=0.296875
+RL-MOEA/D vs random MOEA/D [igd_recomputed]: p=1, Holm8=1
+OMF-RL vs static OMF [igd_recomputed]: p=0.00390625, Holm8=0.03125
+OMF-RL vs random OMF [igd_recomputed]: p=0.00390625, Holm8=0.03125
+RL-MOEA/D vs static MOEA/D [gd_recomputed]: p=0.8203125, Holm8=1
+RL-MOEA/D vs random MOEA/D [gd_recomputed]: p=1, Holm8=1
+OMF-RL vs static OMF [gd_recomputed]: p=0.00390625, Holm8=0.03125
+OMF-RL vs random OMF [gd_recomputed]: p=0.00390625, Holm8=0.03125
+
+11-ALGORITHM OMNIBUS AND NEMENYI (9 INSTANCE-LEVEL MEANS)
+Friedman chi2=85.31313131; p=4.5277633e-14; k=11; N=9
+Nemenyi q_critical=3.21865361; CD=5.03227454; significant pairs=17
+Minimum pairwise Wilcoxon p after Holm correction over 55 pairs=0.21484375
+Mean ranks (rank 1 = best):
+  MOGWO: 1.000000
+  MOABC: 2.222222
+  MOFA: 2.777778
+  NSGA-II: 4.000000
+  SPEA2: 5.000000
+  RL-MOEA/D: 6.888889
+  RL-MOEA/D-random: 6.888889
+  MOEA/D: 8.222222
+  OMF-statique: 8.777778
+  OMF-aleatoire: 9.222222
+  OMF-RL: 11.000000
+Nemenyi-significant pairs (absolute mean-rank difference > CD):
+  MOGWO vs OMF-RL: rank difference=10.000000
+  MOABC vs OMF-RL: rank difference=8.777778
+  MOGWO vs OMF-aleatoire: rank difference=8.222222
+  MOFA vs OMF-RL: rank difference=8.222222
+  MOGWO vs OMF-statique: rank difference=7.777778
+  MOGWO vs MOEA/D: rank difference=7.222222
+  NSGA-II vs OMF-RL: rank difference=7.000000
+  MOABC vs OMF-aleatoire: rank difference=7.000000
+  MOABC vs OMF-statique: rank difference=6.555556
+  MOFA vs OMF-aleatoire: rank difference=6.444444
+  MOFA vs OMF-statique: rank difference=6.000000
+  SPEA2 vs OMF-RL: rank difference=6.000000
+  MOABC vs MOEA/D: rank difference=6.000000
+  MOGWO vs RL-MOEA/D: rank difference=5.888889
+  MOGWO vs RL-MOEA/D-random: rank difference=5.888889
+  MOFA vs MOEA/D: rank difference=5.444444
+  NSGA-II vs OMF-aleatoire: rank difference=5.222222
+
+LYON ROUTE-LEVEL HV COMPARISONS (DESCRIPTIVE; N=3 ROUTES)
+RL-MOEA/D vs static MOEA/D: wins=2/3, mean_A=0.333739, mean_B=0.330923, p=0.75
+RL-MOEA/D vs random MOEA/D: wins=2/3, mean_A=0.333739, mean_B=0.347514, p=1
+random MOEA/D vs static MOEA/D: wins=3/3, mean_A=0.347514, mean_B=0.330923, p=0.25
+
+INTERPRETATION NOTES
+- Repetition-level pooled tests are sensitivity analyses only; they are not the main inference across instances.
+- The primary HV family uses Holm correction across four prespecified contrasts.
+- The secondary family uses Holm correction across the eight IGD/GD contrasts only (4 contrasts x 2 metrics).
+- The omnibus Friedman/Nemenyi and all-pairs Wilcoxon analyses are a separate exploratory family across 11 algorithms.
+- IGD/GD should not be ranked between algorithm groups with different reference_policy labels.
+- cpu_seconds is measured as elapsed wall-clock time in the raw-run code; it is not CPU time.

@@ -1,0 +1,4 @@
+dataset,unit,comparison,algorithm_A,algorithm_B,metric,n_units,A_better,ties,mean_A_across_units,mean_B_across_units,median_paired_difference_A_minus_B,wilcoxon_W,p_raw
+lyon,instance-level mean across repetitions,RL-MOEA/D vs static MOEA/D,RL-MOEA/D,MOEA/D,hv_recomputed,3,2,0,0.33373915483333333,0.3309232025,0.002525572499999962,2.0,0.75
+lyon,instance-level mean across repetitions,RL-MOEA/D vs random MOEA/D,RL-MOEA/D,RL-MOEA/D-random,hv_recomputed,3,2,0,0.33373915483333333,0.34751389566666674,0.0015519459999999707,3.0,1.0
+lyon,instance-level mean across repetitions,random MOEA/D vs static MOEA/D,RL-MOEA/D-random,MOEA/D,hv_recomputed,3,3,0,0.34751389566666674,0.3309232025,0.01989711900000002,0.0,0.25

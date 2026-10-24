@@ -1,0 +1,2 @@
+n_instances,n_algorithms,friedman_chi2,friedman_p,nemenyi_q_critical,nemenyi_cd,minimum_holm_p_55,nemenyi_significant_pairs
+9,11,85.31313131313135,4.527763257332609e-14,3.2186536073291525,5.032274535076397,0.21484375,17

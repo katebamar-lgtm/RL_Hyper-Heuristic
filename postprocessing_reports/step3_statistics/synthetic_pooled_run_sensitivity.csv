@@ -1,0 +1,13 @@
+comparison,algorithm_A,algorithm_B,metric,unit,n_pairs,A_better,ties,mean_A,mean_B,wilcoxon_W,p_raw
+RL-MOEA/D vs static MOEA/D,RL-MOEA/D,MOEA/D,hv_recomputed,matched run (sensitivity only),150,96,0,0.8216055807666668,0.7949174779333334,4088.0,0.0031354004578437278
+RL-MOEA/D vs static MOEA/D,RL-MOEA/D,MOEA/D,igd_recomputed,matched run (sensitivity only),150,88,0,0.22920173897584742,0.2401013093184846,3985.0,0.0016473410394925582
+RL-MOEA/D vs static MOEA/D,RL-MOEA/D,MOEA/D,gd_recomputed,matched run (sensitivity only),150,77,3,0.08655376068123372,0.08393020946523624,5269.0,0.7423513830725488
+RL-MOEA/D vs random MOEA/D,RL-MOEA/D,RL-MOEA/D-random,hv_recomputed,matched run (sensitivity only),150,77,1,0.8216055807666668,0.8372328961333333,5230.0,0.4980907395219888
+RL-MOEA/D vs random MOEA/D,RL-MOEA/D,RL-MOEA/D-random,igd_recomputed,matched run (sensitivity only),150,74,0,0.22920173897584742,0.22636851473498368,5495.0,0.7533158957362072
+RL-MOEA/D vs random MOEA/D,RL-MOEA/D,RL-MOEA/D-random,gd_recomputed,matched run (sensitivity only),150,75,3,0.08655376068123372,0.0782709988927126,5299.0,0.7866002645313561
+OMF-RL vs static OMF,OMF-RL,OMF-statique,hv_recomputed,matched run (sensitivity only),150,2,0,0.3749686988666667,0.6756806859,34.0,4.5465263076292325e-26
+OMF-RL vs static OMF,OMF-RL,OMF-statique,igd_recomputed,matched run (sensitivity only),150,5,0,0.48331043772462173,0.2867727458129649,31.0,4.2818379473030936e-26
+OMF-RL vs static OMF,OMF-RL,OMF-statique,gd_recomputed,matched run (sensitivity only),150,5,0,0.4814929922092559,0.22704166265823952,41.0,5.228881250595094e-26
+OMF-RL vs random OMF,OMF-RL,OMF-aleatoire,hv_recomputed,matched run (sensitivity only),150,5,0,0.3749686988666667,0.6622055975333334,52.0,6.511635972270119e-26
+OMF-RL vs random OMF,OMF-RL,OMF-aleatoire,igd_recomputed,matched run (sensitivity only),150,9,0,0.48331043772462173,0.2950137123948038,99.0,1.6547614615556115e-25
+OMF-RL vs random OMF,OMF-RL,OMF-aleatoire,gd_recomputed,matched run (sensitivity only),150,5,0,0.4814929922092559,0.23915920836855528,134.0,3.2975399297541414e-25

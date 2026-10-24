@@ -1,0 +1,2624 @@
+{
+  "method": "step2 shared per-instance normalization; deterministic Monte-Carlo HV with common sample locations; shared reference front within each primary comparison group",
+  "n_samples": 20000,
+  "normalized_hv_reference_point": [
+    1.1,
+    1.1,
+    1.1,
+    1.1
+  ],
+  "note": "Primary RL-vs-static-vs-random comparisons use a common empirical reference front per branch. Other algorithms retain leave-family-out fronts for descriptive reporting; do not compare IGD/GD across different reference_policy labels.",
+  "source_files_read_only": [
+    "results/phase4_raw_runs.jsonl",
+    "data/lyon/case_study_raw_runs.jsonl"
+  ],
+  "references": [
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 122,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 129,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 129,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 129,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 129,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 88,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L1",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 136,
+      "ideal_bounds": [
+        31.449759017499577,
+        15.4260211337495,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        232.0159328155484,
+        37.88035314501014,
+        18.96,
+        23.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3546022335,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 171,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 154,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 154,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 154,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 154,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 101,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L2",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 126,
+      "ideal_bounds": [
+        28.501443280878004,
+        15.990142706271447,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        205.4947203320512,
+        32.8843246266898,
+        17.96,
+        22.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1479757570,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 148,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 171,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 171,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 171,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 171,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 116,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-L3",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 124,
+      "ideal_bounds": [
+        30.420469132277198,
+        15.588260823594197,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        192.49410847818692,
+        33.359835642502354,
+        20.020000000000007,
+        25.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3569601306,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 128,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 135,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 135,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 135,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 135,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 95,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M1",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 131,
+      "ideal_bounds": [
+        26.37718856072895,
+        14.485348741389535,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        254.05131542704342,
+        30.66637389212062,
+        12.14,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 38294171,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 184,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 244,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 244,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 244,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 244,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 174,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M2",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 221,
+      "ideal_bounds": [
+        26.879164937732433,
+        15.579001769432043,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        250.4587782905477,
+        31.845182708900378,
+        13.709999999999999,
+        15.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1172099426,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 80,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 120,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 120,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 120,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 120,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 87,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-M3",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 93,
+      "ideal_bounds": [
+        26.07232480070813,
+        13.532935556442876,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.68711148728477,
+        30.098110348849726,
+        13.4,
+        14.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1908195786,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 71,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 79,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 79,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 79,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 79,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 78,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S1",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 78,
+      "ideal_bounds": [
+        25.81546816330048,
+        12.700883653809385,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        240.0841820526917,
+        27.52113194860178,
+        11.18,
+        6.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 2533135605,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 116,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 132,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 133,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 133,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 133,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 115,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S2",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 125,
+      "ideal_bounds": [
+        24.603880149952612,
+        13.465061833229644,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        262.7907600333255,
+        26.21285592967357,
+        11.59,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 4144191465,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 97,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "primary_omf",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO",
+        "OMF-RL",
+        "OMF-aleatoire",
+        "OMF-statique"
+      ],
+      "reference_front_size": 116,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "common reference for OMF-static, OMF-random, and OMF-RL; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 112,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 112,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 112,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 91,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "synthetic",
+      "instance": "final-S3",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 105,
+      "ideal_bounds": [
+        23.642967908768288,
+        13.537743273548056,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        242.08342611225336,
+        25.94046796056162,
+        10.790000000000001,
+        9.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3681549590,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 7,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 25,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 25,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 25,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 44,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Belleville St Jean Bourg",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 45,
+      "ideal_bounds": [
+        575.6293333333333,
+        110.78910000000002,
+        0.0,
+        2.0
+      ],
+      "nadir_bounds": [
+        2130.478666666667,
+        196.0704,
+        0.03,
+        12.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 1009327602,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 11,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 11,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 11,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 11,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 18,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Perreux Les Franchises",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 18,
+      "ideal_bounds": [
+        871.5186666666666,
+        94.2745,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        1256.9933333333333,
+        118.89590000000001,
+        0.0,
+        5.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3148464025,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "primary_moead",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOEA/D",
+        "MOFA",
+        "MOGWO",
+        "RL-MOEA/D",
+        "RL-MOEA/D-random"
+      ],
+      "reference_front_size": 19,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "common reference for MOEA/D, RL-MOEA/D, and RL-MOEA/D-random; excludes the compared group and weighted-Dijkstra family"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "legacy_family_exclusion__MOABC",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 31,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "leave-family-out reference for descriptive row MOABC"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "legacy_family_exclusion__MOFA",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 31,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "leave-family-out reference for descriptive row MOFA"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "legacy_family_exclusion__MOGWO",
+      "excluded_algorithms": [
+        "MOABC",
+        "MOFA",
+        "MOGWO"
+      ],
+      "reference_front_size": 31,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "leave-family-out reference for descriptive row MOGWO"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "legacy_family_exclusion__NSGA-II",
+      "excluded_algorithms": [
+        "NSGA-II"
+      ],
+      "reference_front_size": 43,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "leave-family-out reference for descriptive row NSGA-II"
+    },
+    {
+      "dataset": "lyon",
+      "instance": "Thizy-Les-B. THI. Jodard",
+      "reference_policy": "legacy_family_exclusion__SPEA2",
+      "excluded_algorithms": [
+        "SPEA2"
+      ],
+      "reference_front_size": 43,
+      "ideal_bounds": [
+        510.84933333333333,
+        66.85130000000001,
+        0.0,
+        0.0
+      ],
+      "nadir_bounds": [
+        891.3506666666667,
+        110.35190000000001,
+        0.0,
+        10.0
+      ],
+      "reference_point_normalized": [
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "monte_carlo_samples": 20000,
+      "monte_carlo_seed": 3586896473,
+      "policy_description": "leave-family-out reference for descriptive row SPEA2"
+    }
+  ]
+}

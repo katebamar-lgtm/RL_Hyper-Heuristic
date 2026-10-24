@@ -1,0 +1,11 @@
+{
+  "config": {
+    "neighborhood_size": 8,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.2
+  },
+  "hv": 0.5548937969531251,
+  "ties": [
+    "(0.9, 0.2)"
+  ]
+}

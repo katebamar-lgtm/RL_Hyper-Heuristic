@@ -1,0 +1,18 @@
+POST-PROCESSING STEP 2 — RECOMPUTED INDICATORS
+
+Project root: Hyper_Heuristic_Code (resolved at runtime)
+Monte-Carlo samples per run: 20000
+Normalization: shared ideal/nadir per instance, computed from all stored objective fronts across all algorithms and repetitions.
+Hypervolume: normalized objectives; reference point (1.1, 1.1, 1.1, 1.1); fixed deterministic seed per dataset/instance; identical sample locations across algorithms within an instance.
+Reference fronts: common within each primary comparison group (MOEA/D trio or OMF trio), excluding the compared group and weighted-Dijkstra family; leave-family-out references retained for descriptive reference algorithms.
+GD/IGD: computed using the shared per-instance normalization bounds and the selected reference front.
+Source files are read-only; no optimization runs were executed.
+
+Synthetic output rows: 1650
+Lyon output rows: 195
+
+IMPORTANT INTERPRETATION NOTE:
+- Primary static/RL/random comparisons use a common reference front within each host-algorithm family.
+- The MOEA/D-group and OMF-group reference fronts differ; do not rank the two groups against each other by IGD/GD.
+- Descriptive baseline algorithms use leave-family-out reference fronts and should not be compared with primary-group IGD/GD unless the reference_policy is the same.
+- These are empirical approximation fronts, not known true Pareto fronts.

@@ -1,0 +1,26 @@
+line_id,name,mode,fare,bidirectional
+219,Val-d'Oingt - Villefranche-Sur-Saône,bus,,true
+231,Belleville - Villefranche-Sur-Saône,bus,,true
+235,Beaujeu - Belleville-En-Beaujolais,bus,,true
+236,Deux-Grosnes - Villefranche-Sur-Saône,bus,,true
+161,Belleville-En-Beaujolais,bus,,true
+215,Villefranche-Sur-Saône - Lissieu - Lyon,bus,,true
+218,L'Arbresle - Villefranche-Sur-Saône,bus,,true
+T1,Debourg - IUT Feyssine,tram,,true
+T2,Montrochet - Saint Priest Bel Air,tram,,true
+A,Perrache - Vaulx-en-Velin La Soie,metro,,true
+B,Charpennes - Saint-Genis-Laval Hôpital Lyon Sud,metro,,true
+C,Hôtel de Ville - Cuire,metro,,true
+T4,La Doua Gaston Berger  - Hôpital Feyzin Vénissieux,tram,,true
+D,Gare de Vaise G. Collomb - Gare de Vénissieux,metro,,true
+T3,Gare Part-Dieu Villette - Meyzieu les Panettes,tram,,true
+T7,Vaulx-en-Velin La Soie - Décines - OL Vallée,tram,,true
+RX,Rhônexpress Gare Part-Dieu - Aéroport St Exupéry,tram,,true
+T5,Grange Blanche - Eurexpo,tram,,true
+T6,Debourg - La Doua,tram,,true
+TS,Navette OL Stadium,tram,,true
+237,Cours Le Bourg - Gare de Tarare,bus,,true
+239,La Grange Neuve - Gare d'Amplepuis,bus,,true
+240,Parking Winslow - Gare de Roanne,bus,,true
+217,Gare de Tarare - Charmilles,bus,,true
+265,Claveisolles Salle Poly - Gare de Villefranche,bus,,true

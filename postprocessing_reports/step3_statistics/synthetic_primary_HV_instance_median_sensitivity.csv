@@ -1,0 +1,5 @@
+dataset,unit,comparison,algorithm_A,algorithm_B,metric,n_units,A_better,ties,mean_A_across_units,mean_B_across_units,median_paired_difference_A_minus_B,wilcoxon_W,p_raw,p_holm_4_primary_HV
+synthetic,instance-level median across repetitions,RL-MOEA/D vs static MOEA/D,RL-MOEA/D,MOEA/D,hv_recomputed,9,7,0,0.8116116341666667,0.7753710922222223,0.043739987499999966,5.0,0.0390625,0.078125
+synthetic,instance-level median across repetitions,RL-MOEA/D vs random MOEA/D,RL-MOEA/D,RL-MOEA/D-random,hv_recomputed,9,5,0,0.8116116341666667,0.8084190827777777,0.009516650000000126,21.0,0.91015625,0.91015625
+synthetic,instance-level median across repetitions,OMF-RL vs static OMF,OMF-RL,OMF-statique,hv_recomputed,9,0,0,0.3336643230555556,0.6169595391666667,-0.28872052000000004,0.0,0.00390625,0.015625
+synthetic,instance-level median across repetitions,OMF-RL vs random OMF,OMF-RL,OMF-aleatoire,hv_recomputed,9,0,0,0.3336643230555556,0.6116318419444444,-0.2462982225,0.0,0.00390625,0.015625

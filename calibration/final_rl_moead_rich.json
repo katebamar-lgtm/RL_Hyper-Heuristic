@@ -1,0 +1,11 @@
+{
+  "config": {
+    "neighborhood_size": 12,
+    "ucb_c": 0.02,
+    "reward_mode": "rich"
+  },
+  "hv": 0.6397361332031252,
+  "ties": [
+    "0.02"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "config": {
+    "mutation_rate": 0.15
+  },
+  "hv": 0.8759495144531252,
+  "ties": [
+    "0.4",
+    "0.25",
+    "0.1",
+    "0.15",
+    "0.0"
+  ],
+  "note": "Choix conservateur parmi les ex-aequo statistiques (0.0/0.1/0.15/0.25/0.4 tous indiscernables, p>0.05) : 0.15 plutôt que 0.4 (meilleure moyenne brute) pour ne pas trop affaiblir le mécanisme GWO lui-même (une mutation trop fréquente = position purement aléatoire, indépendante des leaders alpha/beta/delta) en vue de la généralisation aux instances plus grandes de la Phase 4."
+}
